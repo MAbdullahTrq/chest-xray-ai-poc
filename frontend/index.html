@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chest X-ray AI Diagnostic Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-x-ray"></i>
+                    <h1>Chest X-ray AI Diagnostic</h1>
+                </div>
+                <div class="status-indicator" id="statusIndicator">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span id="statusText">Checking connection...</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-card">
+                    <h2><i class="fas fa-cloud-upload-alt"></i> Upload Chest X-ray</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-placeholder">
+                            <i class="fas fa-file-medical"></i>
+                            <p>Drag and drop your X-ray image here or click to browse</p>
+                            <p class="upload-hint">Supported formats: JPEG, PNG, DICOM (max 10MB)</p>
+                        </div>
+                        <input type="file" id="fileInput" accept="image/*,.dcm" hidden>
+                    </div>
+                    
+                    <div class="image-preview" id="imagePreview" style="display: none;">
+                        <img id="previewImage" alt="X-ray preview">
+                        <div class="image-info">
+                            <p id="imageInfo"></p>
+                            <button class="btn btn-secondary" id="removeImage">
+                                <i class="fas fa-times"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="analyzeBtn" disabled>
+                        <i class="fas fa-search"></i>
+                        <span>Analyze X-ray</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-card">
+                    <h2><i class="fas fa-chart-bar"></i> Analysis Results</h2>
+                    
+                    <!-- Processing Status -->
+                    <div class="processing-status" id="processingStatus" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>Analyzing X-ray image...</p>
+                        <p class="processing-time">Processing time: <span id="processingTime">0.0</span>s</p>
+                    </div>
+
+                    <!-- Results Content -->
+                    <div class="results-content" id="resultsContent" style="display: none;">
+                        <div class="result-summary">
+                            <div class="top-prediction">
+                                <h3>Primary Finding</h3>
+                                <div class="prediction-badge" id="topPrediction">
+                                    <span class="prediction-name"></span>
+                                    <span class="confidence-score"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="processing-info">
+                                <p><i class="fas fa-clock"></i> Processing time: <span id="finalProcessingTime"></span></p>
+                                <p><i class="fas fa-calendar"></i> Analysis date: <span id="analysisDate"></span></p>
+                            </div>
+                        </div>
+
+                        <div class="findings-section">
+                            <h3>All Findings</h3>
+                            <div class="findings-list" id="findingsList"></div>
+                        </div>
+
+                        <div class="recommendations-section">
+                            <h3><i class="fas fa-stethoscope"></i> Clinical Recommendations</h3>
+                            <div class="recommendations-content" id="recommendationsContent"></div>
+                        </div>
+
+                        <div class="actions">
+                            <button class="btn btn-secondary" id="downloadReport">
+                                <i class="fas fa-download"></i> Download Report
+                            </button>
+                            <button class="btn btn-primary" id="analyzeAnother">
+                                <i class="fas fa-plus"></i> Analyze Another
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="error-card">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Analysis Error</h2>
+                    <div class="error-content">
+                        <p id="errorMessage"></p>
+                        <button class="btn btn-primary" id="retryBtn">
+                            <i class="fas fa-redo"></i> Try Again
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Chest X-ray AI Diagnostic Tool - POC</p>
+                <p>Powered by TorchXRayVision and MONAI</p>
+                <div class="footer-links">
+                    <a href="#" id="aboutLink">About</a>
+                    <a href="#" id="apiDocsLink">API Docs</a>
+                    <a href="#" id="helpLink">Help</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal for About/Help -->
+    <div class="modal" id="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="modalClose">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
