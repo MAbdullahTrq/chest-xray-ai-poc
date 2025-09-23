@@ -33,8 +33,8 @@ Frontend (React/HTML) → API (FastAPI) → Model (TorchXRayVision) → Results
 
 ### Installation
 ```bash
-git clone <your-repo>
-cd chest_xray_poc
+git clone https://github.com/MAbdullahTrq/chest-xray-ai-poc.git
+cd chest-xray-ai-poc
 pip install -r requirements.txt
 ```
 

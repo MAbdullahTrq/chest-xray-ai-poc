@@ -175,18 +175,18 @@ pip3 install opencv-python pillow pydicom SimpleITK scikit-image
 
 ### Step 5.1: Upload Your Code
 ```bash
-# Option 1: Git clone (if you have a repository)
-git clone https://github.com/your-username/chest_xray_poc.git
-cd chest_xray_poc
+# Option 1: Git clone (recommended)
+git clone https://github.com/MAbdullahTrq/chest-xray-ai-poc.git
+cd chest-xray-ai-poc
 
 # Option 2: Upload via SCP from local machine
 # Run this from your local machine:
-scp -r chest_xray_poc/ root@YOUR_INSTANCE_IP:/root/
+scp -r chest-xray-ai-poc/ root@YOUR_INSTANCE_IP:/root/
 ```
 
 ### Step 5.2: Install Project Dependencies
 ```bash
-cd chest_xray_poc
+cd chest-xray-ai-poc
 
 # Install requirements
 pip3 install -r requirements.txt
@@ -216,7 +216,7 @@ print('Models ready!')
 ### Step 6.1: Start the Backend API
 ```bash
 # Navigate to project directory
-cd /root/chest_xray_poc
+cd /root/chest-xray-ai-poc
 
 # Start the FastAPI server
 python3 -m uvicorn backend.main:app --host 0.0.0.0 --port 8000
@@ -239,7 +239,7 @@ curl http://localhost:8000/health
 ### Step 6.3: Serve Frontend (Simple Method)
 ```bash
 # In another terminal/screen session
-cd /root/chest_xray_poc/frontend
+cd /root/chest-xray-ai-poc/frontend
 python3 -m http.server 3000
 
 # Frontend will be available at: http://YOUR_INSTANCE_IP:3000
@@ -285,7 +285,7 @@ module.exports = {
       name: 'xray-api',
       script: 'python3',
       args: ['-m', 'uvicorn', 'backend.main:app', '--host', '0.0.0.0', '--port', '8000'],
-      cwd: '/root/chest_xray_poc',
+      cwd: '/root/chest-xray-ai-poc',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -295,7 +295,7 @@ module.exports = {
       name: 'xray-frontend',
       script: 'python3',
       args: ['-m', 'http.server', '3000'],
-      cwd: '/root/chest_xray_poc/frontend',
+      cwd: '/root/chest-xray-ai-poc/frontend',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -452,7 +452,7 @@ cat > /root/update.sh << 'EOF'
 #!/bin/bash
 apt update && apt upgrade -y
 pip3 install --upgrade pip
-pip3 install --upgrade -r /root/chest_xray_poc/requirements.txt
+pip3 install --upgrade -r /root/chest-xray-ai-poc/requirements.txt
 EOF
 
 chmod +x /root/update.sh
@@ -472,7 +472,7 @@ crontab -e
 cat > /root/backup.sh << 'EOF'
 #!/bin/bash
 DATE=$(date +%Y%m%d_%H%M%S)
-tar -czf /root/xray_poc_backup_$DATE.tar.gz /root/chest_xray_poc
+tar -czf /root/xray_poc_backup_$DATE.tar.gz /root/chest-xray-ai-poc
 echo "Backup created: xray_poc_backup_$DATE.tar.gz"
 EOF
 

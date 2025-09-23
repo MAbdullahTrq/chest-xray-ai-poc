@@ -35,18 +35,20 @@ Get your chest X-ray AI diagnostic tool running in **15 minutes** on TensorDock!
 ssh root@YOUR_INSTANCE_IP
 
 # Clone the POC (or upload your files)
-git clone https://github.com/your-username/chest_xray_poc.git
-cd chest_xray_poc
+git clone https://github.com/MAbdullahTrq/chest-xray-ai-poc.git
+cd chest-xray-ai-poc
 
 # Quick install script
-curl -sSL https://raw.githubusercontent.com/your-username/chest_xray_poc/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/MAbdullahTrq/chest-xray-ai-poc/master/install.sh | bash
 ```
 
 ### Step 4: Run Application (2 minutes)
 ```bash
-# Start the application
-./run_local.sh setup
-./run_local.sh run
+# Start the application with PM2
+pm2 start ecosystem.config.js
+
+# Check status
+pm2 status
 ```
 
 ### Step 5: Access Your App (1 minute)
@@ -68,8 +70,8 @@ curl -sSL https://raw.githubusercontent.com/your-username/chest_xray_poc/main/in
 ### Quick Setup
 ```bash
 # Clone repository
-git clone https://github.com/your-username/chest_xray_poc.git
-cd chest_xray_poc
+git clone https://github.com/MAbdullahTrq/chest-xray-ai-poc.git
+cd chest-xray-ai-poc
 
 # Run setup (installs everything automatically)
 ./run_local.sh setup
@@ -93,8 +95,8 @@ cd chest_xray_poc
 ### Run with Docker
 ```bash
 # Clone repository
-git clone https://github.com/your-username/chest_xray_poc.git
-cd chest_xray_poc
+git clone https://github.com/MAbdullahTrq/chest-xray-ai-poc.git
+cd chest-xray-ai-poc
 
 # Build and run
 docker build -t chest-xray-poc .
