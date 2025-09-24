@@ -13,9 +13,26 @@ Get your chest X-ray AI diagnostic tool running in **15 minutes** on TensorDock!
 
 ---
 
-## 🎯 Option 1: TensorDock (Recommended)
+## 🎯 Option 1: Cloud GPU Providers
 
-### Step 1: Get TensorDock Account (2 minutes)
+### **🥇 Best Value: Vast.ai** (60-80% cheaper)
+- **RTX 4090**: $0.15-0.35/hour (spot pricing)
+- **ROI**: 203,233% (highest)
+- **Best for**: Cost-sensitive startups
+
+### **🥈 Best Balance: TensorDock** (recommended)
+- **RTX 4090**: $0.33/hour (predictable pricing)  
+- **ROI**: 154,000%
+- **Best for**: Growing companies
+
+### **🥉 Best Reliability: Google Cloud**
+- **T4**: $0.35/hour (99.99% SLA)
+- **ROI**: 96,706%
+- **Best for**: Enterprise deployment
+
+### Step 1: Choose Your Provider (2 minutes)
+**For this guide, we'll use TensorDock (good balance of cost/reliability)**
+
 1. Sign up at [TensorDock.com](https://tensordock.com)
 2. Add payment method (minimum $10)
 3. Verify email

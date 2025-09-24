@@ -109,6 +109,12 @@ DEBUG=True
 - Tiered subscription plans: Basic ($29), Pro ($79), Enterprise ($199)
 - ROI: 150,000%+ across all GPU configurations
 
+### **Cloud Provider Options**
+- **🥇 Vast.ai**: $0.15-0.35/hour (best value, 203,233% ROI)
+- **🥈 TensorDock**: $0.33/hour (balanced, 154,000% ROI)  
+- **🥉 Google Cloud**: $0.35/hour (enterprise, 96,706% ROI)
+- **AWS/Azure**: Enterprise options with premium support
+
 ## 🏥 Supported Pathologies
 
 1. Pneumonia
