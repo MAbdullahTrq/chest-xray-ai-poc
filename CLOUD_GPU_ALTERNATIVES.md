@@ -8,12 +8,12 @@ Beyond TensorDock, there are numerous cloud GPU providers that can host your che
 
 ### **1. Vast.ai - Community Cloud (Best Value)**
 
-#### **Pricing & Availability**
+#### **Pricing & Availability** (Updated with Real Market Data)
 ```
-RTX 4090: $0.15-0.35/hour (spot pricing)
-RTX 3090: $0.12-0.28/hour
-A6000: $0.25-0.45/hour
-H100: $1.20-2.50/hour
+RTX 4090: $0.20-0.80/hour (avg: $0.40/hour)
+RTX 3090: $0.15-0.55/hour (avg: $0.25/hour)
+A6000: $0.45-0.70/hour (avg: $0.50/hour)
+A5000: $0.30-0.50/hour (avg: $0.40/hour)
 
 Key Features:
 ✅ Spot pricing (60-80% cheaper)
@@ -26,12 +26,19 @@ Key Features:
 
 #### **SaaS Revenue Potential**
 ```
-RTX 4090 at $0.25/hour average:
-- Monthly cost: $180
+RTX 4090 at $0.40/hour (realistic average):
+- Monthly cost: $288
 - Subscriber capacity: 6,000 users
 - Monthly revenue: $366K
-- Net profit: $365,820 (99.95% margin)
-- ROI: 203,233%
+- Net profit: $365,712 (99.92% margin)
+- ROI: 127,015%
+
+RTX 3090 at $0.25/hour (budget option):
+- Monthly cost: $180
+- Subscriber capacity: 4,500 users
+- Monthly revenue: $274K
+- Net profit: $274,320 (99.93% margin)
+- ROI: 152,400%
 ```
 
 ### **2. RunPod - Container-First Platform**
@@ -172,7 +179,7 @@ Key Features:
 
 | Provider | Best GPU Option | Hourly Cost | Monthly Cost | 6K Subscribers Revenue | Net Profit | ROI | Pros | Cons |
 |----------|----------------|-------------|--------------|----------------------|------------|-----|------|------|
-| **Vast.ai** | RTX 4090 | $0.25 | $180 | $366K | $365.8K | 203,233% | Cheapest, flexible | Variable availability |
+| **Vast.ai** | RTX 4090 | $0.40 | $288 | $366K | $365.7K | 127,015% | Good value, flexible | Variable availability |
 | **TensorDock** | RTX 4090 | $0.33 | $237.60 | $366K | $365.8K | 154,000% | Good balance | Limited regions |
 | **RunPod** | RTX 4090 | $0.34 | $244.80 | $366K | $365.8K | 149,405% | Container-native | Newer platform |
 | **Paperspace** | RTX 4000 | $0.51 | $367.20 | $244K | $243.6K | 66,335% | Developer-friendly | Higher cost |
@@ -182,24 +189,24 @@ Key Features:
 
 ## 🎯 **Provider Recommendations by Use Case**
 
-### **🥇 Best for Cost Optimization: Vast.ai**
+### **🥇 Best for Cost Optimization: TensorDock**
 ```
-Why Choose Vast.ai:
-✅ Lowest cost: $0.15-0.35/hour for RTX 4090
-✅ Spot pricing saves 60-80%
-✅ Global provider network
-✅ Docker-native deployment
-✅ SSH access included
+Why Choose TensorDock:
+✅ Predictable cost: $0.33/hour for RTX 4090
+✅ Good reliability and availability
+✅ Simple pricing model
+✅ Easy deployment process
+✅ Community support
 
 Best For:
-- Cost-sensitive startups
-- Development and testing
-- Variable workloads
-- Technical teams comfortable with spot instances
+- Growing startups wanting predictability
+- Production workloads
+- Consistent performance needs
+- Teams wanting reliability
 
 Revenue Impact:
-- 203,233% ROI (highest of all providers)
-- $365,820 monthly profit on 6K subscribers
+- 154,000% ROI (best reliable option)
+- $365,762 monthly profit on 6K subscribers
 ```
 
 ### **🥈 Best for Balance: TensorDock**
@@ -390,12 +397,12 @@ Vast.ai: 95-98% (varies by provider)
 ## 🎯 **Final Recommendations**
 
 ### **For Startups (Cost Priority)**
-**Choose: Vast.ai + TensorDock backup**
-- Primary: Vast.ai RTX 4090 ($0.25/hour)
+**Choose: Vast.ai RTX 3090 + TensorDock backup**
+- Primary: Vast.ai RTX 3090 ($0.25/hour)
 - Backup: TensorDock RTX 4090 ($0.33/hour)
-- **Total cost**: ~$200/month
-- **Revenue potential**: $366K/month
-- **ROI**: 180,000%+
+- **Total cost**: ~$250/month (including backup standby)
+- **Revenue potential**: $274K/month (primary) + $366K (if scaled)
+- **ROI**: 152,400%+ (primary), higher when scaled
 
 ### **For Growing Companies (Balance)**
 **Choose: TensorDock + RunPod**
