@@ -33,11 +33,13 @@ Frontend (React/HTML) → API (FastAPI) → Model (TorchXRayVision) → Results
 
 ### Quick Start Options
 
-#### **🚀 Optimal Production Setup** (Recommended)
-Follow the [OPTIMAL_SETUP_GUIDE.md](./OPTIMAL_SETUP_GUIDE.md) for the complete multi-provider strategy:
-- **Phase 1**: Vast.ai RTX 3090 ($180/month) - Budget launch
-- **Phase 2**: Add TensorDock RTX 4090 ($238/month) - Production scale  
-- **Phase 3**: Multi-provider enterprise deployment
+#### **🚀 Complete Production Deployment** (Recommended)
+Follow the [COMPLETE_DEPLOYMENT_GUIDE.md](./COMPLETE_DEPLOYMENT_GUIDE.md) for everything you need:
+- **Step-by-step Vast.ai deployment** with real pricing ($180/month)
+- **Multi-model integration** (chest, bone, dental, spine X-rays)
+- **Load balancing & auto-scaling** for 20,000+ subscribers
+- **Business model implementation** with subscription tiers
+- **Monitoring, maintenance & troubleshooting** guide
 
 #### **⚡ Quick Local Testing**
 ```bash
