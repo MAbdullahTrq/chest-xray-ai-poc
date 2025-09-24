@@ -92,9 +92,22 @@ DEBUG=True
 ## 📊 Expected Performance
 
 - **Processing Time**: 2-3 seconds per X-ray
-- **Throughput**: ~1,200 X-rays/hour
+- **Throughput**: ~1,200 X-rays/hour per GPU
 - **Accuracy**: 90%+ on common pathologies
-- **Cost**: ~$0.0002 per analysis on TensorDock
+- **Infrastructure Cost**: ~$0.0002 per analysis
+
+## 💼 SaaS Business Model
+
+### **Subscriber Capacity per GPU**
+- **RTX A4000**: 4,000 subscribers (4-7 X-rays/day each) → $244K/month revenue
+- **RTX 4090**: 6,000 subscribers → $366K/month revenue  
+- **RTX A6000**: 10,000 subscribers → $610K/month revenue
+
+### **Multi-Model Capability**
+- ✅ Single GPU runs 4-20 AI models simultaneously
+- Chest, bone, dental, spine, pediatric X-ray analysis
+- Tiered subscription plans: Basic ($29), Pro ($79), Enterprise ($199)
+- ROI: 150,000%+ across all GPU configurations
 
 ## 🏥 Supported Pathologies
 

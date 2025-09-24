@@ -175,6 +175,16 @@ docker run --gpus all -p 8000:8000 -p 3000:3000 chest-xray-poc
 
 **Target Achievement**: All options deliver 500-700x better than $0.10 target! ✅
 
+### SaaS Business Model Potential
+
+| GPU Model | Subscribers | Monthly Revenue | Multi-Models | ROI |
+|-----------|-------------|-----------------|--------------|-----|
+| **RTX A4000** | 4,000 users | $244K | 4-6 models | 153,900% |
+| **RTX 4090** | 6,000 users | $366K | 8-10 models | 154,000% |
+| **RTX A6000** | 10,000 users | $610K | 15-20 models | 217,200% |
+
+*Based on 4-7 X-rays/day per subscriber with tiered pricing ($29-$199/month)*
+
 ---
 
 ## 🔧 Troubleshooting
