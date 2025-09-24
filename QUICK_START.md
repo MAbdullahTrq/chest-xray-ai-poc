@@ -20,14 +20,19 @@ Get your chest X-ray AI diagnostic tool running in **15 minutes** on TensorDock!
 2. Add payment method (minimum $10)
 3. Verify email
 
-### Step 2: Deploy RTX 3090 Instance (3 minutes)
+### Step 2: Deploy GPU Instance (3 minutes)
 1. Click **"Deploy"** in dashboard
-2. Select **RTX 3090** GPU
+2. **Select GPU**: Choose **RTX 4090** (recommended) or **RTX A6000** (max performance)
 3. Choose **Ubuntu 22.04**
 4. Set **100GB SSD** storage
 5. Add your SSH key (or enable password)
 6. Click **"Deploy Instance"**
 7. **Note the IP address**
+
+**GPU Recommendations:**
+- **RTX 4090**: $0.330/hour (best balance)
+- **RTX A6000**: $0.390/hour (maximum performance, 48GB VRAM)
+- **RTX A4000**: $0.220/hour (budget option for development)
 
 ### Step 3: Connect and Setup (5 minutes)
 ```bash
@@ -146,13 +151,14 @@ docker run --gpus all -p 8000:8000 -p 3000:3000 chest-xray-poc
 
 ## 💰 Cost Breakdown
 
-### TensorDock RTX 3090
-| Usage | Hours/Month | Cost/Month |
-|-------|-------------|------------|
-| **Development** | 40h | $21.60 |
-| **Testing** | 100h | $39.00 |
-| **Production** | 200h | $68.00 |
-| **24/7** | 730h | $221.70 |
+### TensorDock GPU Options (Updated September 2024)
+| GPU Model | Hourly Cost | 100h/Month | 24/7 Month | Best For |
+|-----------|-------------|------------|------------|----------|
+| **RTX A4000** (16GB) | $0.220 | $32.00 | $170.60 | Development |
+| **RTX 4090** (24GB) | $0.330 | $43.00 | $250.90 | Production |
+| **RTX A6000** (48GB) | $0.390 | $49.00 | $294.70 | Max Performance |
+
+*All prices include +$10/month for 100GB storage*
 
 ### Per Analysis Cost
 - **Infrastructure**: $0.0002 per X-ray
