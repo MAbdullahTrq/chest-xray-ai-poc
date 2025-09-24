@@ -31,26 +31,31 @@ Frontend (React/HTML) → API (FastAPI) → Model (TorchXRayVision) → Results
 - Python 3.8+
 - 8GB+ available disk space
 
-### Installation
+### Quick Start Options
+
+#### **🚀 Optimal Production Setup** (Recommended)
+Follow the [OPTIMAL_SETUP_GUIDE.md](./OPTIMAL_SETUP_GUIDE.md) for the complete multi-provider strategy:
+- **Phase 1**: Vast.ai RTX 3090 ($180/month) - Budget launch
+- **Phase 2**: Add TensorDock RTX 4090 ($238/month) - Production scale  
+- **Phase 3**: Multi-provider enterprise deployment
+
+#### **⚡ Quick Local Testing**
 ```bash
 git clone https://github.com/MAbdullahTrq/chest-xray-ai-poc.git
 cd chest-xray-ai-poc
-pip install -r requirements.txt
+./run_local.sh setup
+./run_local.sh run
 ```
 
-### Run the Application
+#### **🐳 Docker Deployment**
 ```bash
-# Start the API server
-python -m uvicorn backend.main:app --host 0.0.0.0 --port 8000
-
-# In another terminal, serve the frontend
-cd frontend
-python -m http.server 3000
+docker build -t chest-xray-poc .
+docker run --gpus all -p 8000:8000 -p 3000:3000 chest-xray-poc
 ```
 
-### Access the Application
-- Frontend: http://localhost:3000
-- API Documentation: http://localhost:8000/docs
+### Access URLs
+- **Frontend**: http://localhost:3000
+- **API Docs**: http://localhost:8000/docs
 
 ## 📁 Project Structure
 

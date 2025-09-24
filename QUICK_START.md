@@ -1,6 +1,10 @@
 # 🚀 Quick Start Guide - Chest X-ray AI POC
 
-Get your chest X-ray AI diagnostic tool running in **15 minutes** on TensorDock!
+Get your chest X-ray AI diagnostic tool running with the optimal multi-provider strategy!
+
+> **📖 For Complete Production Setup**: See [OPTIMAL_SETUP_GUIDE.md](./OPTIMAL_SETUP_GUIDE.md) for the full 3-phase deployment strategy using Vast.ai + TensorDock + GCP.
+
+This guide covers the basic single-provider setup for quick testing.
 
 ## 📋 What You'll Get
 
