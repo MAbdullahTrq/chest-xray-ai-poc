@@ -1,7 +1,7 @@
 # Multi-stage Dockerfile for Chest X-ray AI POC
 
-# Stage 1: Base image with CUDA support
-FROM nvidia/cuda:11.8-runtime-ubuntu22.04 as base
+# Stage 1: Base image with CUDA support (using devel for better compatibility)
+FROM nvidia/cuda:11.8-cudnn8-devel-ubuntu22.04 as base
 
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
@@ -38,9 +38,9 @@ WORKDIR /app
 # Copy requirements first for better caching
 COPY requirements.txt .
 
-# Install Python dependencies
-RUN pip3 install --no-cache-dir --upgrade pip && \
-    pip3 install --no-cache-dir torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 && \
+# Install Python dependencies with specific versions for optimal CUDA compatibility
+RUN pip3 install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip3 install --no-cache-dir torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118 && \
     pip3 install --no-cache-dir -r requirements.txt
 
 # Stage 2: Application
